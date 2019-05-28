@@ -80,23 +80,3 @@ class DataFrameMaker:
             return graphic
 
         return self.df.plot()
-
-
-dbase = DataBase()
-conn = dbase.connect_db(
-    'localhost',
-    'testuser',
-    'testuser1',
-    'test_task'
-)
-
-
-query = """
-    SELECT
-    *
-    FROM device
-    """
-
-dm = DataFrameMaker(conn, query)
-
-print(dm.get_nunique_messages(html=True))
