@@ -9,18 +9,18 @@ Links up MySQL database with pandas. Able to pass its DataFrames to web apps suc
 
 ## including
 
-* Return whole table dataframe.< /br>
+* Return whole table dataframe.
 ```get_frame()```
-* Return dataframe with a number of non-unique messages.< /br>
+* Return dataframe with a number of non-unique messages.
 ```get_nunique_messages()```
-* Return number of dataframe last messages.< /br>
+* Return number of dataframe last messages.
 ```get_last_messages()```
-* Return dataframe-based plot image.< /br>
+* Return dataframe-based plot image.
 ```get_plot()```
 
-set ```html=True``` to return web-prepared dataframe.< /br>
+set ```html=True``` to return web-prepared dataframe.
 
-Html tag to process dataframe-based plot with Django: < /br>
+Html tag to process dataframe-based plot with Django: 
 ```<img src="data:image/png;base64,{{ graphic|safe }}">```
 
 ## Sample Usage
