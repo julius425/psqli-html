@@ -8,7 +8,7 @@ from io import BytesIO
 
 class DataBase:
     """
-    Initialises/closes MySQL database connection.
+    Initialises MySQL database connection.
 
     """
     def connect_db(self, addr, uname, psswd, dbname):
@@ -34,11 +34,12 @@ class DataFrameMaker:
 
     """
     Sends a query to database,
-    reads query-data with pandas method
+    reads query-data with pandas method,
     builds tables or plots based on received query-data
     """
 
     def __init__(self, db, query):
+        """Accepts database and query, creates dataframe"""
         self.db = db
         self.query = query
         self.df = pd.read_sql(self.query, self.db)
